@@ -9,7 +9,7 @@ const UserAPI = (token) => {
     if (token) {
       const getUser = async () => {
         try {
-          const res = await axios.get("/user/infor", {
+          const res = await axios.get("https://e-comm-frontend-4.onrender.com/user/infor", {
             headers: { Authorization: token },
           });
           setIsLogged(true);
