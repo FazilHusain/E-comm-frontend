@@ -16,7 +16,7 @@ const Login = () => {
   const loginSubmit =async e => {
     e.preventDefault()
     try{
-      await axios.post('https://e-comm-backend-3-6r0t.onrender.com/user/login',{...user})
+      await axios.post('https://e-comm-backend-6.onrender.com/user/login',{...user})
 
       localStorage.setItem('firstLogin',true)
 
