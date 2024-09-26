@@ -1,12 +1,9 @@
-import React,{useContext} from 'react'
-import { Link } from 'react-router-dom';
-import { GlobalState } from '../../../../GlobalState';
+import React from 'react'
 import BtnRender from './BtnRender';
 
 const ProductList = ({product,isAdmin}) => {
-const state = useContext(GlobalState);
-const addCart = state.userAPI.addCart;
-  
+
+
   return (
     <div className='product_card'>
       {
