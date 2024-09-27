@@ -17,8 +17,13 @@ export const DataProvider = ({ children }) => {
       // Assuming the response structure includes the access token
       setToken(res.data.accesstoken);
     } catch (error) {
-      console.error("Error refreshing token:", error);
-      // You can handle the error further (e.g., redirecting to login)
+      if (error.response) {
+        console.error("Error refreshing token:", error.response.data);
+      } else if (error.request) {
+        console.error("No response received:", error.request);
+      } else {
+        console.error("Axios error:", error.message);
+      }
     }
   }
   
