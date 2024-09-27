@@ -10,7 +10,7 @@ export const DataProvider = ({ children }) => {
 
   const refreshToken = async() => {
     try {
-      const res = await axios.get("https://e-comm-backend-3-6r0t.onrender.com/user/refresh_token", {
+      const res = await axios.get("https://e-comm-backend-6.onrender.com/user/refresh_token", {
         withCredentials: true,  // Include cookies with the request
       });
       
