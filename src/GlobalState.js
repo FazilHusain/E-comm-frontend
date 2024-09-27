@@ -14,6 +14,8 @@ export const DataProvider = ({ children }) => {
         withCredentials: true,  // Include cookies with the request
       });
       
+      console.log(res);
+      
       // Assuming the response structure includes the access token
       setToken(res.data.accesstoken);
     } catch (error) {
