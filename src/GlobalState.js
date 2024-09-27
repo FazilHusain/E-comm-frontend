@@ -15,7 +15,7 @@ export const DataProvider = ({ children }) => {
       });
       
       console.log(res);
-      
+    
       // Assuming the response structure includes the access token
       setToken(res.data.accesstoken);
     } catch (error) {
