@@ -9,8 +9,17 @@ export const DataProvider = ({ children }) => {
   const [token, setToken] = useState(false);
 
   const refreshToken = async() => {
-    const res = await axios.get("https://e-comm-backend-3-6r0t.onrender.com/user/refresh_token");
-    setToken(res.data.accesstoken);
+    try {
+      const res = await axios.get("https://e-comm-backend-3-6r0t.onrender.com/user/refresh_token", {
+        withCredentials: true,  // Include cookies with the request
+      });
+      
+      // Assuming the response structure includes the access token
+      setToken(res.data.accesstoken);
+    } catch (error) {
+      console.error("Error refreshing token:", error);
+      // You can handle the error further (e.g., redirecting to login)
+    }
   }
   
   useEffect(() => {
