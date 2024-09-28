@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   const logoutUser = async () => {
-    await axios.get("/user/logout");
+    await axios.get("https://e-comm-backend-z6qo.onrender.com/user/logout");
 
     localStorage.clear();
     setIsAdmin(false);
