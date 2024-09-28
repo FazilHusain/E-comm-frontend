@@ -10,7 +10,7 @@ export const DataProvider = ({ children }) => {
 
   const refreshToken = async() => {
     try {
-      const res = await axios.get("/user/refresh_token");
+      const res = await axios.get("https://e-comm-backend-z6qo.onrender.com/user/refresh_token");
       
       // Assuming the response structure includes the access token
       setToken(res.data.accesstoken);
