@@ -17,7 +17,7 @@ const Register = () => {
   const loginSubmit =async e => {
     e.preventDefault()
     try{
-      await axios.post('https://e-comm-backend-6.onrender.com/user/register',{...user})
+      await axios.post('https://e-comm-backend-z6qo.onrender.com/user/register',{...user})
 
       localStorage.setItem('firstRegister',true)
 
