@@ -12,8 +12,6 @@ export const DataProvider = ({ children }) => {
     try {
       const res = await axios.get("/user/refresh_token");
       
-      console.log(res);
-    
       // Assuming the response structure includes the access token
       setToken(res.data.accesstoken);
     } catch (error) {
